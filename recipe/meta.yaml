@@ -12,18 +12,18 @@ source:
 build:
   entry_points:
     - trubar = trubar.__main__:main
-  noarch: python
+  skip: True  # [py>38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
-    - setuptools >=40.9.0
+    - python
+    - setuptools
     - wheel
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - libcst
     - pyyaml
 
@@ -35,7 +35,7 @@ test:
     - trubar --help
   requires:
     - pip
-    - python {{ python_min }}
+    - python
 
 about:
   home: https://github.com/janezd/trubar
