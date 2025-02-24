@@ -12,7 +12,7 @@ source:
 build:
   entry_points:
     - trubar = trubar.__main__:main
-  skip: True  # [py>38]
+  skip: True  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -42,7 +42,10 @@ about:
   summary: Utility for translation of Python sources
   license: MIT
   license_file: LICENSE
-
+  description: |
+    Trubar is a utility for translation of Python sources. It is designed to be
+    used as a preprocessor for Python code that is to be translated to another
+    language.
 extra:
   recipe-maintainers:
     - janezd
