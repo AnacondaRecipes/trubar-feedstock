@@ -12,7 +12,7 @@ source:
 build:
   entry_points:
     - trubar = trubar.__main__:main
-  skip: True  # [py<38]
+  skip: True  # [py<38 or s390x]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -41,11 +41,14 @@ about:
   home: https://github.com/janezd/trubar
   summary: Utility for translation of Python sources
   license: MIT
+  license_family: MIT
   license_file: LICENSE
   description: |
     Trubar is a utility for translation of Python sources. It is designed to be
     used as a preprocessor for Python code that is to be translated to another
     language.
+  dev_url: https://github.com/janezd/trubar
+  doc_url: https://github.com/janezd/trubar/tree/master/docs
 extra:
   recipe-maintainers:
     - janezd
