@@ -25,7 +25,7 @@ requirements:
   run:
     - python
     - libcst
-    - pyyaml 
+    - pyyaml
 
 test:
   imports:
